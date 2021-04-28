@@ -1,4 +1,5 @@
 ## 📦 如何使用
+声明一个 `global.scss` 文件
 ```
 // 移动端
 @import './_mixin';
@@ -12,6 +13,23 @@
 body {
   color: #333;
 }
+```
+
+## 💬 vue项目如何使用全局的mixin
+
+```
+// vue.config.js
+module.exports = {
+    publicPath: '/',
+    css: {
+        loaderOptions: {
+            scss: {
+                prependData: `@import "你的路径/_mixin.scss";`
+            }
+        }
+    }
+};
+
 ```
 
 ## 🔨字体图标
@@ -56,18 +74,4 @@ body {
 
 // 使用before元素绘制上边框线
 @include thinLine($useBefore: true, $position: 'top', $backgroundColor: #eee, $right: .3rem, $top: 0, $left: .3rem);
-```
-
-```
-module.exports = {
-    publicPath: '/',
-    css: {
-        loaderOptions: {
-            scss: {
-                prependData: `@import "你的路径/_mixin.scss";`
-            }
-        }
-    }
-};
-
 ```
