@@ -1,4 +1,20 @@
-## 字体图标
+## 📦 如何使用
+```
+// 移动端
+@import './_mixin';
+@import './_resetMobile';
+
+// PC端
+@import './_mixin';
+@import './_resetPc';
+
+// 你可能需要设置一下你的主色调
+body {
+  color: #333;
+}
+```
+
+## 🔨字体图标
 `iconfont` 默认的使用方式有点冗余，建议这么使用
 
 ```
@@ -22,7 +38,7 @@
 }
 ```
 
-## 文字溢出
+## 🔨文字溢出
 ```
 @include textEllipsis($type: 'multipleRows', $row: 1) // 多行溢出
 @include textEllipsis($type: 'singleRow', $maxLength: 100%) // 单行溢出
@@ -33,7 +49,7 @@
 }
 ```
 
-## 1px 边框线
+## 🔨1px 边框线
 ```
 // 使用after元素绘制下边框线
 @include thinLine($useBefore: false, $position: 'bottom', $backgroundColor: #eee, $right: .3rem, $bottom: 0, $left: .3rem);
