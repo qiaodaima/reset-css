@@ -1,0 +1,19 @@
+@charset "utf-8";
+@import "./commonReset";
+
+// 根元素
+html {
+  font-size: 50px;
+}
+
+body {
+  max-width: 7.5rem;
+  font-size: 0.28rem;
+}
+
+// 上标、下标
+sub,
+sup {
+  line-height: 1;
+  font-size: 0.24rem;
+}
