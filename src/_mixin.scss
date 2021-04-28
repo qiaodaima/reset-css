@@ -1,0 +1,106 @@
+@charset "utf-8";
+
+// 浮动、清除浮动
+@mixin clearFix {
+  &:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+    font-size: 0;
+  }
+}
+
+// 字体图标
+@mixin iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  // 修改阿里图标样式
+  line-height: 1;
+  vertical-align: middle;
+  font-size: inherit;
+  font-style: normal;
+  color: inherit;
+}
+
+// 圆形
+@mixin circular($size) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+// 单行超出省略号
+@mixin textEllipsis($type: "multipleRows", $maxLength: 100%, $row: 1) {
+  @if $type == "singleRow" {
+    max-width: $maxLength;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+
+  @if $type == "multipleRows" {
+    display: -webkit-box;
+    -webkit-line-clamp: $row;
+    -webkit-box-orient: vertical;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+// 移动端 1px细线边框
+@mixin thinLine(
+  $useBefore: true,
+  $position: "top",
+  $backgroundColor: #eee,
+  $top: 0,
+  $right: 0,
+  $bottom: 0,
+  $left: 0
+) {
+  position: relative;
+
+  &:before {
+    position: absolute;
+    content: "";
+    background-color: $backgroundColor;
+
+    @if $position == "top" {
+      left: $left;
+      right: $right;
+      top: $top;
+      height: 1px;
+      transform: scale(1, 0.5);
+    }
+
+    @if $position == "bottom" {
+      left: $left;
+      right: $right;
+      bottom: $bottom;
+      height: 1px;
+      transform: scale(1, 0.5);
+    }
+
+    @if $position == "left" {
+      left: $left;
+      top: $top;
+      bottom: $bottom;
+      width: 1px;
+      transform: scale(0.5, 1);
+    }
+
+    @if $position == "right" {
+      right: $right;
+      top: $top;
+      bottom: $bottom;
+      width: 1px;
+      transform: scale(0.5, 1);
+    }
+  }
+}
