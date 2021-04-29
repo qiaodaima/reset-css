@@ -1,0 +1,32 @@
+@charset "utf-8";
+@import "./commonReset";
+
+// 根元素
+html {
+  font-size: 14px;
+}
+
+// 上标、下标
+sub,
+sup {
+  line-height: 1;
+  font-size: 12px;
+}
+
+// 表单
+button,
+select,
+input[type="Date"],
+input[type="file"],
+input[type="reset"],
+input[type="radio"],
+input[type="color"],
+input[type="submit"],
+input[type="button"],
+input[type="checkbox"] {
+  &:disabled {
+    cursor: not-allowed;
+  }
+
+  cursor: pointer;
+}

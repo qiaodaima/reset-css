@@ -1,0 +1,173 @@
+@charset "utf-8";
+
+/*!
+* 参考：http://www.zhangxinxu.com/wordpress/?p=758
+* 参考：http://g.alicdn.com/msui/sm/0.6.2/css/sm.css
+* 参考：https://github.com/necolas/normalize.css/blob/master/normalize.css
+* 参考：https://ant.design/
+*
+* Email:qiaodaima@qq.com
+* https://github.com/qiaodaima
+*/
+
+// 盒子模型
+* {
+  &,
+  &:before,
+  &:after {
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+  }
+}
+
+html {
+  font-family: sans-serif;
+  line-height: 1.5;
+}
+body {
+  margin: 0 auto;
+}
+
+// 行内元素统一行块
+a,
+b,
+i,
+em,
+sub,
+sup,
+abbr,
+span,
+code,
+time,
+label,
+input,
+audio,
+small,
+video,
+button,
+select,
+canvas,
+strong,
+address,
+textarea,
+progress {
+  display: inline-block;
+}
+
+// html5
+nav,
+main,
+menu,
+aside,
+figure,
+footer,
+header,
+hgroup,
+article,
+details,
+section,
+summary,
+figcaption {
+  display: block;
+}
+
+// 标题
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+pre {
+  margin: 0;
+}
+
+// 强调
+i,
+em,
+dfn,
+cite,
+address {
+  font-style: normal;
+}
+b,
+strong {
+  font-weight: inherit;
+}
+small {
+  font-size: inherit;
+}
+abbr[title] {
+  border-bottom: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+// 表单
+input,
+button,
+select,
+option,
+textarea {
+  margin: 0;
+  padding: 0;
+  vertical-align: middle;
+  outline: none;
+  color: inherit;
+  font: inherit;
+}
+legend,
+fieldset,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+// 表格
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+th {
+  text-align: left;
+}
+th,
+td {
+  padding: 0;
+  font-weight: normal;
+}
+
+// 列表
+dl,
+dd {
+  margin: 0;
+}
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+// 链接、分割线、图片
+a {
+  text-decoration: none;
+  color: inherit;
+  outline: none;
+}
+img {
+  border: none;
+  vertical-align: top;
+}
+// 空路径会产生边框效果
+img[src=""],
+img:not([src]) {
+  opacity: 0;
+}
+hr {
+  margin: 0;
+}
